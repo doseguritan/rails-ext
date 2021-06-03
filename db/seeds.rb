@@ -1,0 +1,1 @@
+Menu.create(name: 'Menu', path: 'adminmenu', icon: 'fa-list', is_accessible_by_user: true, is_active: true)
