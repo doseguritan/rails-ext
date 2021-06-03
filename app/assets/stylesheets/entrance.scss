@@ -1,0 +1,97 @@
+// Place all the styles related to the entrance controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.sencha-logo .main-logo img{
+    background-color: #fff;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+.sencha-logo{
+    background-color: #0588a0;
+    color: #fff;
+    font-weight: bolder;
+}
+.x-treelist-navigation .x-treelist-item-selected > .x-treelist-row:before,
+.x-treelist-navigation .x-treelist-item-selected.x-treelist-item-tool:after,
+.x-panel-header-default, .x-window-header-default-top, 
+.x-btn.x-btn-disabled.x-btn-default-large,
+.x-btn-default-large,
+.x-window-header-default .x-tool-img{
+    background-color: #0588a0;
+}
+.x-panel-header-default, 
+.x-window-header-default-top, 
+.x-window-body-default,
+.x-btn.x-btn-disabled.x-btn-default-large,
+.x-btn-default-large,
+.x-window-default,
+.x-panel-default{
+    border-color: #0588a0;
+}
+.x-btn-over.x-btn-default-large,
+.x-btn-over.x-btn-default-large.x-btn-pressed,
+.x-btn-focus.x-btn-default-large-focus.x-btn-pressed,
+.x-btn-focus.x-btn-default-large-focus
+{
+    background-color: #0588a0;
+    border-color: #0588a0;
+}
+.x-btn-default-small-cancel,
+.x-btn-cancel.x-btn-over.x-btn-default-small-cancel,
+.x-btn-cancel.x-btn-over.x-btn-default-small-cancel.x-btn-pressed,
+.x-btn-cancel.x-btn-focus.x-btn-default-small-focus.x-btn-pressed,
+.x-btn-cancel.x-btn-focus.x-btn-default-small-focus,
+.x-btn.x-unselectable.x-box-item.x-toolbar-item.x-btn-default-toolbar-small.x-cancel.x-btn-cancel.x-btn-default-toolbar-small-cancel{
+    background-color: #e82b73;
+    border-color: #e82b73;
+}
+.x-btn.x-unselectable.x-box-item.x-toolbar-item.x-btn-default-toolbar-small.x-cancel.x-btn-cancel.x-btn-default-toolbar-small-cancel .x-btn-inner-default-toolbar-small{
+    color: #fff;
+}
+
+.x-btn-default-small-save,
+.x-btn-save.x-btn-over.x-btn-default-small-save,
+.x-btn-save.x-btn-over.x-btn-default-small-save.x-btn-pressed,
+.x-btn-save.x-btn-focus.x-btn-default-small-focus.x-btn-pressed,
+.x-btn-save.x-btn-focus.x-btn-default-small-focus{
+    background-color: #0588a0;
+    border-color: #0588a0;
+}
+
+.x-grid-cell-inner-action-col div:not(:last-child){
+    margin-right: 10px;
+}
+.x-action-col-icon {
+    font-size: 20px !important;
+}
+
+.x-btn-col-icon-info{
+    color: #0588a0;
+}
+
+.x-btn-col-icon-danger{
+    color: #a31515;
+}
+
+.x-btn-col-icon-success{
+    color: #96c93d;
+}
+.x-color-green{
+    color: #96c93d;
+}
+
+.x-color-red{
+    color: #a31515;
+}
+
+.product-image-cell{
+    width: 100px;
+}
+
+.auth-locked-window .x-window-body{
+    background-size: 100% 100% !important;
+}
+.x-panel-header-default .x-tool-tool-el{
+    background: transparent;
+}

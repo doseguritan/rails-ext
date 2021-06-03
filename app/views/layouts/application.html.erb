@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SmartVending Admin</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="/extjs/build/classic/theme-triton/resources/theme-triton-all.css" />
+    <link rel="stylesheet" href="/resources/Admin-all.css" />
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript">
+      <% @menus = Menu.where(is_accessible_by_user: true, is_active: true).order(ordinal: :asc).map do |menu|
+            {text: menu.name, hidden: true, iconCls: "x-fa #{menu.icon}", viewType: menu.path, leaf: true}
+        end %>
+      window.MODULE = "<%=params[:controller]%>";
+      window.USER_LOGIN = <%= user_signed_in? %>;
+      window.current_user = {
+        user: "<%=user_signed_in? ? current_user.name : "Anonymous"%>",
+        image: "<%=user_signed_in? ? current_user.name : "/resources/images/profile.png"%>"
+      };
+      window.erb_flash = <%= flash.to_json.html_safe %>;
+      window.navigation_menus = <%= @menus.to_json.html_safe %>
+    </script>
+    <script type="text/javascript" src="/extjs/build/ext-all.js"></script>
+    <%= javascript_pack_tag 'routes' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': false %>
+    <%= javascript_pack_tag 'template', 'data-turbolinks-track': false %>
+    <%= javascript_pack_tag 'module', 'data-turbolinks-track': false %>
+  </head>
+
+  <body>
+    <% @navigation_menus.to_json %>
+    <%= yield %>
+  </body>
+</html>

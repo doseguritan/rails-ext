@@ -1,0 +1,16 @@
+window.Routes = <%= JsRoutes.generate() %>;
+
+authenticityToken = function() { return document.querySelector('meta[name="csrf-token"]').getAttribute('content'); }
+notify = (message, success=true, options={}) => {
+  Toastify({
+    text: message,
+    duration: 3000,
+    newWindow: true,
+    close: true,
+    gravity: "top", 
+    position: 'right', 
+    backgroundColor: success ? "linear-gradient(to right, #00b09b, #96c93d)" : "linear-gradient(to right, #DC143C, #FF4500)",
+    className: "toastify-define",
+    ...options
+  }).showToast();
+}
